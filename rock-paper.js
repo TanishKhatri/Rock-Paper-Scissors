@@ -1,4 +1,8 @@
 //Outputs Integer between 0 and 2 including them.
+
+let humanScore = 0;
+let computerScore = 0;
+
 function randomRangeThree () {
   if((0 <= Math.random()) && (Math.random() < 0.33))
   {
@@ -22,13 +26,48 @@ function getComputerChoice (choice) {
 }
 
 function getHumanChoice () {
-  userChoice = prompt("Please type the character of your choice: \n 1. R for Rock \n 2. P for Paper \n 3. S for Scissors");
+  userChoice = prompt("Please type your choice: \n 1. Rock \n 2. Paper \n 3. Scissors");
+  userChoice = userChoice.toUpperCase();
 
-  if ((userChoice !== "R") && (userChoice !== "P") && (userChoice !== "S")) {
+  if ((userChoice !== "ROCK") && (userChoice !== "PAPER") && (userChoice !== "SCISSORS")) {
     console.log("Invalid choice: Please reload the page to try again");
     return 1;
   }
 
   return userChoice;
+}
+
+function playRound (humanChoice, computerChoice) {
+  if (humanChoice === "ROCK") {
+    if (computerChoice === "ROCK") {
+      console.log("Tie! No winner");
+    } else if (computerChoice === "SCISSORS") {
+      console.log("You won! Congratulations!");
+      humanScore += 1;      
+    } else {
+      console.log("You Lost!");
+      computerScore += 1;
+    }
+  } else if (humanChoice === "SCISSORS") {
+    if (computerChoice === "SCISSORS") {
+      console.log("Tie! No winner");
+    } else if (computerChoice === "PAPER") {
+      console.log("You won! Congratulations!");
+      humanScore += 1;      
+    } else {
+      console.log("You Lost!");
+      computerScore += 1;
+    }
+  } else {
+    if (computerChoice === "PAPER") {
+      console.log("Tie! No winner");
+    } else if (computerChoice === "ROCK") {
+      console.log("You won! Congratulations!");
+      humanScore += 1;      
+    } else {
+      console.log("You Lost!");
+      computerScore += 1;
+    }
+  }
 }
 
