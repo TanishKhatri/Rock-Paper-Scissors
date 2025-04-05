@@ -21,3 +21,14 @@ function getComputerChoice (choice) {
   }
 }
 
+function getHumanChoice () {
+  userChoice = prompt("Please type the character of your choice: \n 1. R for Rock \n 2. P for Paper \n 3. S for Scissors");
+
+  if ((userChoice !== "R") && (userChoice !== "P") && (userChoice !== "S")) {
+    console.log("Invalid choice: Please reload the page to try again");
+    return 1;
+  }
+
+  return userChoice;
+}
+
