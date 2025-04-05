@@ -17,11 +17,14 @@ function randomRangeThree () {
 function getComputerChoice (choice) {
   switch (choice) {
     case 0:
-      return "Rock";
+      console.log("Computer Choice: ROCK");
+      return "ROCK";
     case 1:
-      return "Paper";
+      console.log("Computer Choice: PAPER");
+      return "PAPER";
     case 2:
-      return "Scissor";
+      console.log("Computer Choice: SCISSORS");
+      return "SCISSORS";
   }
 }
 
@@ -34,6 +37,7 @@ function getHumanChoice () {
     return 1;
   }
 
+  console.log(userChoice);
   return userChoice;
 }
 
@@ -73,9 +77,7 @@ function playRound (humanChoice, computerChoice) {
 
 function playGame () {
   for(let i=0; i < 5; i++){
-    getComputerChoice(randomRangeThree());
-    getHumanChoice();
-    playRound();
+    playRound(getHumanChoice() , getComputerChoice(randomRangeThree()));
   }
 }
 
