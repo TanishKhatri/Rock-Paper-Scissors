@@ -1,7 +1,9 @@
-//Outputs Integer between 0 and 2 including them.
 
 let humanScore = 0;
 let computerScore = 0;
+let tie = "Tie! No winner";
+let win = "You won! Congratulations!";
+let lose = "You Lost!";
 
 function randomRangeThree () {
   if((0 <= Math.random()) && (Math.random() < 0.33))
@@ -44,32 +46,32 @@ function getHumanChoice () {
 function playRound (humanChoice, computerChoice) {
   if (humanChoice === "ROCK") {
     if (computerChoice === "ROCK") {
-      console.log("Tie! No winner");
+      console.log(tie);
     } else if (computerChoice === "SCISSORS") {
-      console.log("You won! Congratulations!");
+      console.log(win);
       humanScore += 1;      
     } else {
-      console.log("You Lost!");
+      console.log(lose);
       computerScore += 1;
     }
   } else if (humanChoice === "SCISSORS") {
     if (computerChoice === "SCISSORS") {
-      console.log("Tie! No winner");
+      console.log(tie);
     } else if (computerChoice === "PAPER") {
-      console.log("You won! Congratulations!");
+      console.log(win);
       humanScore += 1;      
     } else {
-      console.log("You Lost!");
+      console.log(lose);
       computerScore += 1;
     }
   } else {
     if (computerChoice === "PAPER") {
-      console.log("Tie! No winner");
+      console.log(tie);
     } else if (computerChoice === "ROCK") {
-      console.log("You won! Congratulations!");
+      console.log(win);
       humanScore += 1;      
     } else {
-      console.log("You Lost!");
+      console.log(lose);
       computerScore += 1;
     }
   }
