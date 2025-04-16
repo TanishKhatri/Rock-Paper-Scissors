@@ -34,17 +34,6 @@ function getComputerChoice (choice) {
   }
 }
 
-// function getHumanChoice () {
-//   userChoice = userChoice.toUpperCase();
-
-//   if ((userChoice !== "ROCK") && (userChoice !== "PAPER") && (userChoice !== "SCISSORS")) {
-//     console.log("Invalid choice: Please reload the page to try again");
-//     return 1;
-//   }
-
-//   console.log(userChoice);
-//   return userChoice;
-// }
 function addHumanScore () {
   humanScore += 1;
   humanScoreDiv.textContent = `Player Score: ${humanScore}`;
