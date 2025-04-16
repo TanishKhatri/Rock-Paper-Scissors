@@ -9,7 +9,7 @@ let tie = "Tie! No winner";
 let win = "You won! Congratulations!";
 let lose = "You Lost!";
 
-let wonFlag = 0;
+let wonFlag = false;
 
 
 function randomRangeThree () {
@@ -51,18 +51,18 @@ function getComputerChoice (choice) {
 function addHumanScore () {
   humanScore += 1;
   humanScoreDiv.textContent = `Player Score: ${humanScore}`;
-  if (humanScore === 5 && wonFlag === 0) {
+  if (humanScore === 5 && !wonFlag) {
     winner.textContent = win;
-    wonFlag = 1;
+    wonFlag = true;
   }
 }
 
 function addComputerScore () {
   computerScore += 1;
   computerScoreDiv.textContent = `Computer Score: ${computerScore}`;
-  if (computerScore === 5 && wonFlag === 0) {
+  if (computerScore === 5 && !wonFlag) {
     winner.textContent = lose;
-    wonFlag = 2;
+    wonFlag = true;
   }
 }
 
