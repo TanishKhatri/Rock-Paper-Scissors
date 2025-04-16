@@ -26,13 +26,10 @@ function randomRangeThree () {
 function getComputerChoice (choice) {
   switch (choice) {
     case 0:
-      console.log("Computer Choice: ROCK");
       return "ROCK";
     case 1:
-      console.log("Computer Choice: PAPER");
       return "PAPER";
     case 2:
-      console.log("Computer Choice: SCISSORS");
       return "SCISSORS";
   }
 }
